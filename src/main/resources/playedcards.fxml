@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uni_hannover.cah.mainGui.PlayedcardsController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="595.0" minWidth="10.0" prefWidth="28.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="832.0" minWidth="10.0" prefWidth="441.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="699.0" minWidth="10.0" prefWidth="255.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="699.0" minWidth="10.0" prefWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <AnchorPane fx:id="anchor1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Pane fx:id="paneID" layoutX="-15.0" prefHeight="326.0" prefWidth="287.0">
+               <children>
+                  <ChoiceBox fx:id="playerChoiceBoxID" layoutX="69.0" layoutY="224.0" prefWidth="150.0" />
+                  <Button fx:id="ChooseButtonID" layoutX="116.0" layoutY="270.0" mnemonicParsing="false" onAction="#chooseButton" text="Choose" />
+                  <Label fx:id="labelID" layoutX="109.0" layoutY="199.0" text="Your Choice: " />
+                  <Label layoutX="23.0" layoutY="33.0" text="Question:" />
+                  <Label fx:id="questionLabelID" layoutX="79.0" layoutY="50.0" prefHeight="149.0" prefWidth="130.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="tableViewID" prefHeight="390.0" prefWidth="413.0">
+              <columns>
+                <TableColumn fx:id="playerNameColumn" editable="false" prefWidth="75.0" sortable="false" text="Player" />
+                <TableColumn fx:id="playedCardsColumn" prefWidth="337.0" text="Cards" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
